@@ -4,6 +4,7 @@ const {
 	OEM,
 	PSM,
 } = Tesseract;
+
 detectionOptions = {
 	//tessedit_ocr_engine_mode: OEM.TESSERACT_ONLY,
 	// tessedit_ocr_engine_mode: OEM.LSTM_ONLY,
@@ -184,3 +185,10 @@ function getValuesFromKeywords(result, keyWords, minConfidenceScore = 0.5) {
 		return b.confidence - a.confidence;
 	});
 }
+
+document.getElementById('app-wrap').addEventListener('drop',(e)=>{
+	debugger
+	e.preventDefault();
+	e.stopPropagation();
+	console.log("droped")
+})
