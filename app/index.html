@@ -12,6 +12,8 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="app/style.css" />
+		<link rel="stylesheet" href="app/ocr.css" />
+
 	</head>
 	<body class="bg-light">
 		<nav class="navbar navbar-dark bg-dark fixed-top px-3">
@@ -22,8 +24,8 @@
 			<div class="controls-panel">
 				<button type="button" class="btn btn-outline-primary" onclick="scanDocument()">Scan</button>
 				<div class="progress m-2">
-					<div id="progress-bar" class="progress-bar progress-bar-striped b-1" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-						<span class="text-dark pl-2" style="font-size: 1.5em" id="progress-bar-status-text"></span>
+					<div id="progress-bar" class="progress-bar progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+						<span class="text-dark" style="font-size: 1.5em" id="progress-bar-status-text"></span>
 					</div>
 				</div>
 			</div>
@@ -36,30 +38,29 @@
 				</div>
 			</div>
 
-			<div class="output-panel ">
+			<div class="output-panel border">
 				<div id="status-wrapper" class="alert text-wrap text-center text-break m-2 p-3 d-none shadow"></div>
-				<div id="info-form-wrapper" class="m-1 p-3 d-none">
-					<div id="document-info-box-wrapper" class="bg-light shadow border  mb-2 p-3">
-						<div class="form-group">
-							<label for="no-facture">Num Facture</label>
-							<input type="text" class="form-control form-control-sm " id="no-facture" disabled />
-							<small id="no-factureHelpBlock" class="form-text text-muted"> </small>
-						</div>
-						<div class="form-group">
-							<label for="total">Total</label>
-							<input type="text" class="form-control form-control-sm " id="total" disabled />
-							<small id="totalHelpBlock" class="form-text text-muted"> </small>
-						</div>
-						<div class="form-group">
-							<label for="nom">Nom</label>
-							<input type="text" class="form-control form-control-sm " id="nom" disabled />
-							<small id="nomHelpBlock" class="form-text text-muted"> </small>
-						</div>
+				<div id="info-form-wrapper" class="m-1 p-3">
+					<div id="total-input-wrap" class="form-group bg-light shadow border d-none mb-2 p-3">
+						<label for="total">Total</label>
+						<input type="text" class="form-control form-control " id="total-input" disabled />
+						<small id="total-help0" class="form-text text-muted"> </small>
+						<small id="total-help1" class="form-text text-muted"> </small>
+						<small id="total-help2" class="form-text text-muted"> </small>
+						<small id="total-help3" class="form-text text-muted"> </small>
+						<small id="total-help4" class="form-text text-muted"> </small>
 					</div>
-					<div id="document-info-box-wrapper" class="bg-light shadow border mb-2 p-3 "></div>
-					<div id="document-info-box-wrapper" class="bg-light shadow border mb-2 p-3 "></div>
-					<div id="document-info-box-wrapper" class="bg-light shadow border mb-2 p-3 "></div>
+					<div id="num-facture-input-wrap" class="form-group bg-light shadow border d-none mb-2 p-3">
+						<label for="total">N° Facture</label>
+						<input type="text" class="form-control form-control " id="num-facture-input" disabled />
+						<small id="num-facture-help0" class="form-text text-muted"> </small>
+						<small id="num-facture-help1" class="form-text text-muted"> </small>
+						<small id="num-facture-help2" class="form-text text-muted"> </small>
+						<small id="num-facture-help3" class="form-text text-muted"> </small>
+						<small id="num-facture-help4" class="form-text text-muted"> </small>
+					</div>
 				</div>
+				<div id="hocr_out" class="shadow bg-light m-1 p-3 border"></div>
 			</div>
 		</div>
 	</body>

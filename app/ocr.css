@@ -1,0 +1,24 @@
+.ocr_page, .ocr_carea, .ocr_par, .ocr_line, .ocrx_word {
+    margin: 0px;
+    padding: 0px;
+}
+
+.ocr_page {
+    border: thin green dotted;
+}
+
+.ocr_carea {
+    border: thin red dotted;
+}
+
+.ocr_par {
+    border: thin blue dotted;
+}
+
+.ocr_line {
+    border: thin yellow dotted;
+}
+
+.ocrx_word {
+    border: thin purple dotted;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "test app for Tesseractjs",
+  "scripts": {},
+  "author": "TheHidden1",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^12.0.7",
+    "jshint": "^2.10.2",
+    "jslint": "^0.12.1",
+    "tesseract.js": "^1.0.19",
+    "tesseract.ts": "^1.1.2"
+  }
+}
