@@ -1,0 +1,97 @@
+body,
+html,
+div,
+a,
+p,
+image {
+	margin: 0;
+	padding: 0;
+}
+::-webkit-scrollbar {
+	height: 0;
+	width: 0; /* remove scrollbar space */
+	background: transparent; /* optional: just make scrollbar invisible */
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	z-index: 1000;
+	height: 60px;
+	padding: 0;
+}
+.controls-panel {
+	width: 50%;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+.app-wrap {
+	z-index: 1;
+
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: grid;
+	margin-top: 60px;
+	grid-template-columns: 50% 50%;
+}
+/* // Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { .app-wrap {grid-template-rows:50% 50%;} }
+
+  // Medium devices (tablets, 768px and up) 
+@media (min-width: 992px) { .app-wrap {} } */
+.image-preview {
+	/* background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAIUlEQVQoU2NkIAIwEqGGgbaKGhgYGEAYDmhrHYaHibIOAKrOAQoliEazAAAAAElFTkSuQmCC") repeat; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.preview-wrap {
+	max-width: 100%;
+	max-height: 100%;
+	position: relative;
+}
+#preview_img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: scale-down;
+}
+.img_overlay {
+	position: absolute;
+	max-width: 100%;
+}
+.output-panel {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: left;
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAOklEQVQoU43MSQ4AIAgEweHnPN1golGWgT5XWjBLZeAUQAs3shk7XsTghyoYUAZT5GGJXkjRgS0yuAAy0gmL9EqnKwAAAABJRU5ErkJggg==");
+}
+
+.progress {
+	width: 300px;
+	height: 40px;
+}
+
+#info-form-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#document-info-box-wrapper {
+	height: 300px;
+	width: 40%;
+}
+
+.pattern-bg {
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIklEQVQoU2NkIBIwEqmOAVlhAwMDAwhjBWSZiNcVw8nEBgBE+AGLK2kYcQAAAABJRU5ErkJggg==") repeat;
+}

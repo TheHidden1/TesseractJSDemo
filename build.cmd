@@ -1,0 +1,1 @@
+cd .\tesseract.js\ && npm run build-custom
