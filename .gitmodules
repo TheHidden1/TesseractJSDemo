@@ -1,0 +1,3 @@
+[submodule "tesseract.js"]
+	path = tesseract.js
+	url = https://github.com/naptha/tesseract.js
