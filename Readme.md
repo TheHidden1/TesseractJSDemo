@@ -1,6 +1,6 @@
 # TesseractJS
 
-this a sample app that implement Tesseract.js in the task of extracting meaningful information from bill & receipts, this very basic and works as a proof of concept rather than a full fledged implemetaion 
+this a sample app that implement Tesseract.js in the task of extracting meaningful information from bill & receipts, this very basic and works as a proof of concept rather than a fully fledged implemetation 
 
 
 # Installation 
