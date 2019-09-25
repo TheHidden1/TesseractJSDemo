@@ -1,15 +1,9 @@
-const {
-	TesseractWorker,
-	utils: { loadLang },
-	OEM,
-	PSM,
-} = Tesseract;
-
+const { TesseractWorker, utils: { loadLang }, OEM, PSM, } = Tesseract;
 detectionOptions = {
-	//tessedit_ocr_engine_mode: OEM.TESSERACT_ONLY,
-	// tessedit_ocr_engine_mode: OEM.LSTM_ONLY,
 	tessedit_ocr_engine_mode: OEM.TESSERACT_LSTM_COMBINED,
-	tessedit_pageseg_mode: PSM.SPARSE_TEXT_OSD,
+	// tessedit_ocr_engine_mode: OEM.LSTM_ONLY,
+	// tessedit_ocr_engine_mode: OEM.TESSERACT_LSTM_COMBINED,
+	// tessedit_pageseg_mode: PSM.SPARSE_TEXT_OSD,
 	tessedit_create_hocr: "0",
 	tessedit_create_tsv: "0",
 	tessedit_create_unlv: "0",
@@ -30,7 +24,7 @@ const TotalkeyWords = [
 const NumFacturekeyWords = [{ key: "Facture n°", multiplier: 1 }, { key: "Facture", multiplier: 0.9 }, { key: "n°", multiplier: 0.5 }];
 
 const numberRegex = /[+-]?\d+(?:\.\d+)?/;
-const numFactureRegex = /[+-]?\d+(?:\.\d+)?/;
+const numFactureRegex = /[+-]?\d+(?:\/[.,]\d+)?/;
 
 const input = document.getElementById("preview_img");
 input.onload = setUpOverlay;
@@ -61,7 +55,7 @@ function handleResult(res) {
 	endTimer();
 	console.log(res);
 	clearCanvas();
-	res.words.forEach(function(word) {
+	res.words.forEach(function (word) {
 		drawBox(word, ctx);
 	});
 	alert(`Success ! took ${tEnd - tStart} Ms`, "success");
@@ -80,7 +74,7 @@ function endTimer() {
 function readURL(imageInput) {
 	const file = imageInput.files[0];
 	const reader = new FileReader();
-	reader.onload = function(e) {
+	reader.onload = function (e) {
 		input.src = e.target.result;
 	};
 	reader.readAsDataURL(file);
@@ -186,7 +180,7 @@ function getValuesFromKeywords(result, keyWords, minConfidenceScore = 0.5) {
 	});
 }
 
-document.getElementById('app-wrap').addEventListener('drop',(e)=>{
+document.getElementById('app-wrap').addEventListener('drop', (e) => {
 	debugger
 	e.preventDefault();
 	e.stopPropagation();

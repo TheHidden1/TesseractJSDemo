@@ -11,8 +11,8 @@
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="app/style.css" />
-		<link rel="stylesheet" href="app/ocr.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="ocr.css" />
 
 	</head>
 	<body class="bg-light">
@@ -44,20 +44,22 @@
 					<div id="total-input-wrap" class="form-group bg-light shadow border d-none mb-2 p-3">
 						<label for="total">Total</label>
 						<input type="text" class="form-control form-control " id="total-input" disabled />
-						<small id="total-help0" class="form-text text-muted"> </small>
-						<small id="total-help1" class="form-text text-muted"> </small>
-						<small id="total-help2" class="form-text text-muted"> </small>
-						<small id="total-help3" class="form-text text-muted"> </small>
-						<small id="total-help4" class="form-text text-muted"> </small>
+						<small id="total-help-su" class="form-text text-muted ">Suggestions : </small>
+						<small id="total-help0" class="form-text text-muted pl-2"> </small>
+						<small id="total-help1" class="form-text text-muted pl-2"> </small>
+						<small id="total-help2" class="form-text text-muted pl-2"> </small>
+						<small id="total-help3" class="form-text text-muted pl-2"> </small>
+						<small id="total-help4" class="form-text text-muted pl-2"> </small>
 					</div>
 					<div id="num-facture-input-wrap" class="form-group bg-light shadow border d-none mb-2 p-3">
 						<label for="total">N° Facture</label>
 						<input type="text" class="form-control form-control " id="num-facture-input" disabled />
-						<small id="num-facture-help0" class="form-text text-muted"> </small>
-						<small id="num-facture-help1" class="form-text text-muted"> </small>
-						<small id="num-facture-help2" class="form-text text-muted"> </small>
-						<small id="num-facture-help3" class="form-text text-muted"> </small>
-						<small id="num-facture-help4" class="form-text text-muted"> </small>
+						<small id="total-help-su" class="form-text text-muted ">Suggestions :  </small>
+						<small id="num-facture-help0" class="form-text text-muted pl-2"> </small>
+						<small id="num-facture-help1" class="form-text text-muted pl-2"> </small>
+						<small id="num-facture-help2" class="form-text text-muted pl-2"> </small>
+						<small id="num-facture-help3" class="form-text text-muted pl-2"> </small>
+						<small id="num-facture-help4" class="form-text text-muted pl-2"> </small>
 					</div>
 				</div>
 				<div id="hocr_out" class="shadow bg-light m-1 p-3 border d-none"></div>
@@ -65,7 +67,7 @@
 		</div>
 	</body>
 	<script src="../dist/tesseract.min.js"></script>
-	<script src="app/index.js"></script>
+	<script src="index.js"></script>
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "tesseract.js Sample App",
   "scripts": {
+
+    "start": "npm run start-server",
+    
     "build": "cd tesseract.js && npm run build-custom",
     "clean": "node ./node_modules/rimraf/bin.js dist",
-    "start-server": "node ./node_modules/serve/bin/serve.js",
-    "start": "npm run clean && npm run build && npm run start-server"
+    "start-server": "node ./node_modules/serve/bin/serve.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,6 @@
   "homepage": "https://github.com/TheHidden1/TesseractJSDemo#readme",
   "dependencies": {
     "rimraf": "^2.6.3",
-    "serve": "^11.0.1"
+    "serve": "^11.1.0"
   }
 }
